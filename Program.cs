@@ -10,9 +10,9 @@ using System.Security.Permissions;
 
 namespace Password_Generator
 {
-    internal class Program
+    public class Program
     {
-        private static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             string user;
@@ -25,19 +25,7 @@ namespace Password_Generator
 
                 Console.WriteLine("Generating...\n");
 
-                string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-                var StringChar = new char[15];
-                var character = new Random();
-
-                for (int i = 0; i < StringChar.Length; i++)
-                {
-                    StringChar[i] = characters[character.Next(characters.Length)];
-                }
-
-                var finalString = new String(StringChar);
-
-                Console.WriteLine(finalString);
+                PassGen.Main(args);
 
             }
 
