@@ -18,7 +18,7 @@ namespace Password_Generator
             string username;
 
             Console.WriteLine("Welcome. Would you like to generate a username, password or both for a new account?");
-            Console.WriteLine("Enter 'username', 'password', or 'both' to continue.");
+            Console.WriteLine("Enter 'username' or 'password' to continue.");
             username = Console.ReadLine();
 
             if (username == "password")
@@ -34,12 +34,8 @@ namespace Password_Generator
             {
                 Console.WriteLine("Generating...\n");
 
-                
+                UserGen.Main(args);
 
-            }
-            else if (username == "both")
-            {
-                Console.WriteLine("Generating...\n");
             }
             
         }
