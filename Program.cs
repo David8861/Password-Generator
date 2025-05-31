@@ -15,12 +15,13 @@ namespace Password_Generator
         public static void Main(string[] args)
         {
 
-            string user;
+            string username;
 
-            Console.WriteLine("Enter 'pass' to generate a new, unique password.");
-            user = Console.ReadLine();
+            Console.WriteLine("Welcome. Would you like to generate a username, password or both for a new account?");
+            Console.WriteLine("Enter 'username', 'password', or 'both' to continue.");
+            username = Console.ReadLine();
 
-            if (user == "pass")
+            if (username == "password")
             {
 
                 Console.WriteLine("Generating...\n");
@@ -29,14 +30,17 @@ namespace Password_Generator
 
             }
 
-            else if (user != "Password")
+            if (username == "username")
             {
-                Console.WriteLine("Nevermind");
+                Console.WriteLine("Generating...\n");
 
-                Console.ReadLine();
+                
 
             }
-
+            else if (username == "both")
+            {
+                Console.WriteLine("Generating...\n");
+            }
             
         }
 
